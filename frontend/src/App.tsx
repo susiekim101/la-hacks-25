@@ -1,16 +1,14 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Opening from './pages/opening.tsx';
+import Login from './pages/login.tsx';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        <li><Link to="/">Home</Link></li>
-      </div>
-
       <Routes>
         <Route path="/" element={<Opening/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </BrowserRouter>
   );
