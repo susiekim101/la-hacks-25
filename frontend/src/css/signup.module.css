@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #45B2FF, #FFF3CC);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
