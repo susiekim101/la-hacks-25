@@ -1,24 +1,42 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import styles from "../css/signup.module.css";
 
 const SignUp = () => {
+    const navigate = useNavigate();
 
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [gender, setGender] = useState('');
-    const [age, setAge] = useState('');
+    const [age, setAge] = useState<string | number>('');
     const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
 
     const handleSubmit =  async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
+
+        if(gender === ""){
+            alert("Please complete all fields");
+            return;
+        }
         try {
-            const response = await axios.post('http://localhost:3000/api/auth/register', {
-                username,
+            const response = await axios.post('http://localhost:4000/api/auth/register', {
+                email,
                 password,
+                name,
+                gender,
+                age,
             });
             console.log(response.data);
-        } catch(err) {
-            console.log(err);
+            alert("Sign up successful. Redirecting you to login");
+            navigate('/login');
+        } catch(err: any) {
+            if(err.response && err.response.status === 400) {
+                alert("This user already exists. Redirecting you to login");
+                navigate('/login');
+            } else {
+                console.log(err);
+            }
         }
     };
 
@@ -29,25 +47,36 @@ const SignUp = () => {
 
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label className="block text-gray-700 mb-2">Email:</label>
+                        <label htmlFor="name" className="block text-gray-700 mb-2">Name:</label>
                         <input 
+                            id="name"
+                            type="text"
+                            className="w-full px-4 py-2 mb-5 rounded-full bg-blue-100 ring-2-white focus:outline-none focus:ring-1 focus:ring-yellow-400"
+                            placeholder="Enter your name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+
+                        <label htmlFor="email" className="block text-gray-700 mb-2">Email:</label>
+                        <input 
+                            id="email"
                             type="text"
                             className="w-full px-4 py-2 mb-5 rounded-full bg-blue-100 ring-2-white focus:outline-none focus:ring-1 focus:ring-yellow-400"
                             placeholder="Enter your email"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
 
                         <div className={styles.genderage}>
                             <div className={styles.textInput}>
-                                <label className="w-fit block text-gray-700 mb-2">Gender:</label>
+                                <label htmlFor="gender" className="w-fit block text-gray-700 mb-2">Gender:</label>
                                 <select 
-                                    name="gender" 
+                                    id="gender"
                                     value={gender}
                                     onChange={(e) => setGender(e.target.value)}
                                     className="w-fit px-4 py-2 rounded-full bg-blue-100 ring-2-white focus:outline-none focus:ring-1 focus:ring-yellow-400"
                                 >
-                                        <option value="none" selected disabled hidden>Select</option>
+                                        <option value="" disabled hidden>Select</option>
                                         <option value="female">Female</option>
                                         <option value="male">Male</option>
                                         <option value="other">Other</option>
@@ -55,21 +84,23 @@ const SignUp = () => {
                             </div>
 
                             <div className={styles.textInput}>
-                                <label className="w-fit block text-gray-600 mb-2">Age</label>
+                                <label htmlFor="age" className="w-fit block text-gray-600 mb-2">Age</label>
                                 <input
+                                    id="age"
                                     type="text"
                                     className="w-1/2 px-4 py-2 rounded-full bg-blue-100 ring-2-white focus:outline-none focus:ring-1 focus:ring-yellow-400"
                                     placeholder="Age"
                                     value={age}
-                                    onChange={(e)=>setAge(e.target.value)}
+                                    onChange={(e) => setAge(Number(e.target.value))}
                                 />
                             </div>
                             
                         </div>
 
-                        <label className="block text-gray-700 mb-2">Password:</label>
+                        <label htmlFor="password" className="block text-gray-700 mb-2">Password:</label>
                         <input 
-                            type="text"
+                            id="password"
+                            type="password"
                             className="w-full px-4 py-2 mb-5 rounded-full bg-blue-100 ring-2-white focus:outline-none focus:ring-1 focus:ring-yellow-400"
                             placeholder="Enter your password"
                             value={password}
