@@ -1,13 +1,9 @@
 @import "tailwindcss";
 
-
 html, body {
     height: 100%;
     margin: 0;
-}
-
-body {
-    background-image: linear-gradient(to bottom, #45B2FF, #FFF3CC);
+    background: linear-gradient(to bottom, #45B2FF, #FFF3CC) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,3 +27,36 @@ body {
     height: 100vh;
     z-index: 1;
 }
+
+.genderage {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    width: 100%;
+}
+
+.textInput {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.loginButton {
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 0.3em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #edf8ff;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    background-color: #ebf7ff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }

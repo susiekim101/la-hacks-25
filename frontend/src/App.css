@@ -50,7 +50,6 @@ html, body {
 
 body {
   background-image: linear-gradient(to bottom, #45B2FF, #FFF3CC);
-  background-attachment: fixed;
-  background-size: cover;
+  min-height: 100vh;
   background-repeat: no-repeat;
 }

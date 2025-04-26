@@ -3,14 +3,14 @@ import axios from "axios";
 import styles from "../css/login.module.css";
 
 const Login = () => {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5173/api/auth/login', {
-                username,
+            const response = await axios.post('http://localhost:4000/api/auth/login', {
+                email,
                 password
             });
             console.log(response.data);
@@ -26,19 +26,21 @@ const Login = () => {
 
             <form className="space-y-6" onSubmit={handleLogin}>
                 <div>
-                    <label className="block text-gray-700 mb-2">Username: </label>
+                    <label htmlFor="email" className="block text-gray-700 mb-2">Email: </label>
                     <input
+                        id="email"
                         type="text"
                         className="w-full px-4 py-2 rounded-full bg-blue-100 ring-2-white focus:outline-none focus:ring-1 focus:ring-yellow-400"
-                        placeholder="Enter username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Enter email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
 
                 <div>
-                    <label className="block text-gray-700 mb-2">Password:</label>
+                    <label id="password" className="block text-gray-700 mb-2">Password:</label>
                     <input
+                        id = "password"
                         type="password"
                         className="w-full px-4 py-2 rounded-full bg-blue-100 focus: outline-none focus:ring-1 focus: ring-yellow-400"
                         placeholder="Enter password"
