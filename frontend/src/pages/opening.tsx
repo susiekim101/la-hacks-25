@@ -1,9 +1,6 @@
 function Opening() {
     return (
         <>
-        <div>
-            
-        </div>
         </>
     )
 }
