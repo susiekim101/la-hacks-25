@@ -22,8 +22,8 @@ const Login = () => {
 
     return (
         <>
-        <div className="bg-blue-300 p-10 rounded-3xl shadow-lg w-96 sm:w-[500px] sm:h-[500px]">
-            <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">Login</h2>
+        <div className="bg-blue-300 p-8 rounded-3xl shadow-lg w-96 sm:w-96">
+            <h2 className="text-2xl font-bold text-center mb-5 text-gray-800">Login</h2>
 
             <form className="space-y-6" onSubmit={handleLogin}>
                 <div>
@@ -58,7 +58,7 @@ const Login = () => {
                 </div>
 
                 <p className="text-white text-center">———————— OR ————————</p>
-                <a href="/signup" className="block text-white visited:text-white text-center">Sign Up</a>
+                <a href="/signup" className="block text-white visited:text-white text-center my-0">Sign Up</a>
 
             </form>
 
