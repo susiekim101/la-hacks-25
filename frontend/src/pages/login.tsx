@@ -1,9 +1,11 @@
+import styles from '../css/login.module.css';
+
 function Login() {
     return (
-        <>
-        <p>Hello</p>
-        </>
-    )
+        <div className={styles.body}>
+            <p>Hello</p>
+        </div>
+    );
 }
 
 export default Login
