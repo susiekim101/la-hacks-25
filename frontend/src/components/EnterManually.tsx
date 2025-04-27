@@ -1,6 +1,5 @@
 // src/components/UploadManually.tsx (Example file path)
 
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const UploadManually = () => {
