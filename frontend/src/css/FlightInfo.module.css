@@ -71,7 +71,7 @@ body {
     justify-content: center;
     width: 100%; /* Take full width of contentWrapper */
     min-height: 70vh;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(69, 178, 255, 0.3);
     backdrop-filter: blur(5px);
     border-radius: 20px;
     padding: 30px 40px;
@@ -120,3 +120,34 @@ body {
 .navigationButton:hover {
     background-color: #004678;
 }
+/* In FLightInfo.module.css */
+
+/* ... (keep existing styles like .parent, .contentWrapper, .FlightInfoContainer etc.) ... */
+
+/* NEW class for label + input row */
+.inputRow {
+    display: flex;          /* Enable Flexbox */
+    align-items: center;    /* Vertically align items in the middle */
+    gap: 1rem;              /* Space between label and input (adjust as needed) */
+    width: 100%;            /* Make the row take the full width of its container */
+    margin-bottom: 0.75rem; /* Add some space below each row */
+  }
+  
+  .inputLabel {
+    /* Styles for the label text (e.g., "Flight:") */
+    color: #003366;         /* Use your desired label color */
+    font-weight: 500;       /* Medium weight */
+    flex-shrink: 0;         /* Prevent the label from shrinking if input grows */
+    /* Optional: set a fixed width if needed */
+    /* width: 80px; */
+    /* text-align: right; */
+  }
+  
+  /* Ensure normalFont has appropriate color */
+  .normalFont {
+    color: #003366; /* Darker blue for better contrast */
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  
+  /* ... (keep other existing styles) ... */
