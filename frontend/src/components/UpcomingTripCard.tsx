@@ -1,8 +1,15 @@
 import ProfilePreview from "./ProfilePreview.tsx";
+import "../css/UpcomingTripCard.css";
 
 function UpcomingTripCard(){
     return(
-        <ProfilePreview/>
+        <div className = "upcoming-trip-card">
+            <div className = "profile-preview">
+                <ProfilePreview/>
+            </div>
+                <div className = "contact-info">
+            </div>
+        </div>
     );
 }
 

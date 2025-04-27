@@ -1,41 +1,44 @@
-// src/components/UploadManually.tsx (Example file path)
+// src/components/NextButton.tsx
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from '../css/NextButton.module.css'; // We'll create this CSS module next
 
-const nextButton = () => {
-    const navigate = useNavigate();
+// Define the props the component accepts
+interface NextButtonProps {
+  targetPath: string;            // REQUIRED: The route to navigate to
+  buttonText?: string;         // Optional: Text to display (defaults to "Next")
+  disabled?: boolean;          // Optional: Whether the button is disabled
+  className?: string;          // Optional: Allows adding extra CSS classes
+}
 
-    // Define the custom color for the text
-    const manualEntryColor = "#000850"; // Your specified dark blue/black color
+const NextButton: React.FC<NextButtonProps> = ({
+  targetPath,
+  buttonText = "Next", // Default text is "Next"
+  disabled = false,
+  className = '',
+}) => {
+  const navigate = useNavigate();
 
-    // Handler function to navigate when the button is clicked
-    const handleManualEntryClick = () => {
-        console.log("Navigating to /enter-manually...");
-        navigate('/enter-manually'); // Navigate to the specified route
-    };
+  // Handler to perform navigation
+  const handleClick = () => {
+    if (!disabled) {
+      console.log(`Navigating to ${targetPath}...`);
+      navigate(targetPath);
+    }
+  };
 
-    return (
-        // Using a button element, styled to look like an underlined link
-        <button
-            type="button" // Important for buttons not submitting forms
-            onClick={handleManualEntryClick}
-            className={`
-                p-2                   /* Remove default padding */
-                underline             /* Add underline to text */
-                text-[${manualEntryColor}] /* Set text color */
-                font-medium           /* Adjust font weight as needed */
-                cursor-pointer
-                hover:text-opacity-80   /* Optional: Slight fade on hover */
-                focus:outline-none      /* Remove default focus outline */
-                focus:ring-1 focus:ring-offset-1 focus:ring-[${manualEntryColor}] /* Custom focus ring for accessibility */
-                transition duration-150 ease-in-out
-            `}
-            style={{ color: manualEntryColor }} // Set text color via style attribute as well
-        >
-            next
-        </button>
-    );
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      disabled={disabled}
+      // Combine the default styles with any custom classes passed in
+      className={`${styles.nextButton} ${className}`}
+    >
+      {buttonText}
+    </button>
+  );
 };
 
-export default nextButton;
+export default NextButton;

@@ -1,7 +1,7 @@
 import MatchButton from "./MatchButton.tsx";
 import Descriptors from "./Descriptors.tsx";
 import Tags from "./Tags.tsx";
-import "./PotentialMatchCard.css";
+import "../css/PotentialMatchCard.css";
 
 function PotentialMatchCard() {
   return (
