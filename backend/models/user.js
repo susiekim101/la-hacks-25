@@ -10,7 +10,8 @@ const userSchema = new mongoose.Schema( {
     verificationCode: { type: String },
     isVerified: { type: Boolean, default: false },
 
-    bio: { type: String, default: ""}
+    bio: { type: String, default: ""},
+    arrivalTime: {type: String, default:""}
 
     
 });

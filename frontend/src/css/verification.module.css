@@ -57,11 +57,10 @@ button:focus-visible {
     background: rgba(118, 198, 255, 0.3);
     border-radius: 20px;
     padding: 10px;
-
 }
 
 .title {
-    color: black;
+    color: white;
     font-weight: 400;
     margin: 20px;
     font-size: 1.5rem;
