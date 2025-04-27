@@ -57,17 +57,17 @@ body {
 .contentWrapper {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center children by default */
+    align-items: center;
     z-index: 10;
-    width: clamp(300px, 35vw, 500px); /* Give the wrapper the width constraint */
+    width: clamp(300px, 35vw, 500px); 
 }
 
 .FlightInfoContainer {
-    width: 100%; /* Take full width of contentWrapper */
+    width: 100%; 
     min-height: 70vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-around;
     justify-content: center;
     background: rgba(118, 198, 255, 0.3);
     backdrop-filter: blur(5px);
@@ -104,40 +104,32 @@ body {
     border-radius: 5px;
     cursor: pointer;
     color: white;
-    transition: background-color 0.2s ease; /* Add transition */
+    transition: background-color 0.2s ease; 
 }
 
 .navigationButton:hover {
     background-color: #004678;
 }
-/* In FLightInfo.module.css */
 
-/* ... (keep existing styles like .parent, .contentWrapper, .FlightInfoContainer etc.) ... */
-
-/* NEW class for label + input row */
 .inputRow {
-    display: flex;          /* Enable Flexbox */
-    align-items: center;    /* Vertically align items in the middle */
-    gap: 1rem;              /* Space between label and input (adjust as needed) */
-    width: 100%;            /* Make the row take the full width of its container */
-    margin-bottom: 0.75rem; /* Add some space below each row */
+    display: flex;  
+    align-items: center;  
+    gap: 1rem;    
+    width: 100%;   
+    margin-bottom: 0.75rem; 
   }
   
-  .inputLabel {
-    /* Styles for the label text (e.g., "Flight:") */
-    color: #003366;         /* Use your desired label color */
-    font-weight: 500;       /* Medium weight */
-    flex-shrink: 0;         /* Prevent the label from shrinking if input grows */
-    /* Optional: set a fixed width if needed */
-    /* width: 80px; */
-    /* text-align: right; */
+.inputLabel {
+    color: #003366; 
+    font-weight: 500; 
+    flex-shrink: 0;
+
   }
-  
-  /* Ensure normalFont has appropriate color */
-  .normalFont {
-    color: #003366; /* Darker blue for better contrast */
-    font-weight: 400;
-    font-size: 1rem;
-  }
-  
-  /* ... (keep other existing styles) ... */
+
+.enter {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 5px;
+}

@@ -1,4 +1,4 @@
-import styles from '../css/FLightInfo.module.css';
+import styles from '../css/FlightInfo.module.css';
 import Upload from '../components/Upload.tsx'; // Your upload component
 import cloud1 from '../assets/images/cloud5.png';
 import cloud2 from '../assets/images/cloud2.png';
@@ -15,8 +15,19 @@ const FlightInfo = () => {
                 <div className={styles.myfont}>New Trip</div>
 
                 <div className={styles.FlightInfoContainer}>
-                    <div className={styles.normalFont}>Upload Flight Information</div>
-                    <Upload />
+
+                    <div className={styles.normalFont}>
+                        Upload Flight Information
+                    </div>
+
+                    <div>
+                        <Upload />
+                    </div>
+
+                    <div style={{marginTop: '2rem'}}>
+                        <a href="/EnterManually" className={styles.enter}>Enter Manually</a>
+                    </div>
+
                 </div>
             </div>
         </div>
