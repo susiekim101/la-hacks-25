@@ -59,21 +59,18 @@ const Opening = () => {
           <div className={styles.fuelFont}>467</div>
           <p className={styles.subtitle}>million tons of carbon saved</p>
           <div className={styles.buttonsContainer}>
-          <NavigateButton
-        targetPath="/login" // Specify the destination route
-        buttonText="Login"
-        className={styles.loginButton}
-      />
+            <NavigateButton
+              targetPath="/login"
+              buttonText="Start"
+              className={styles.loginButton}/>
 
-          <NavigateButton
-                  targetPath="/signup" // Specify the destination route
-                  buttonText="Sign Up"
-                  className={styles.loginButton}
-                /> 
-
-            </div>
-          </div>
+            <NavigateButton
+              targetPath="/signup"
+              buttonText="Sign Up"
+              className={styles.signupButton}/> 
         </div>
+      </div>
+    </div>
   );
 };
 

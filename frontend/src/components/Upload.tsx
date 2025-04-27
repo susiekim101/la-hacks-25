@@ -11,6 +11,7 @@ const Upload = () => {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState<boolean>(false);
     const navigate = useNavigate(); 
+    const userEmail = localStorage.getItem('userEmail');
 
     const activeColor = "#45B2FF";
 
@@ -33,7 +34,6 @@ const Upload = () => {
             return;
         }
         try {
-            const userEmail = localStorage.getItem('userEmail');
             const formData = new FormData();
             formData.append("file", selectedFile);
             formData.append("email", userEmail || "");
@@ -43,13 +43,13 @@ const Upload = () => {
                     headers: {'Content-Type': 'multipart/form-data'}
                 });
                 console.log("PDF upload success:", response.data);
-                navigate('/feed');
+                navigate('/feed', { state: {userEmail: userEmail, userName: response.data.name} });
             } else if (selectedFile.type === 'image/jpeg' || selectedFile.type === 'image/jpg') {
                 const response = await axios.post('http://localhost:4000/api/auth/image', formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 console.log("Image upload success:", response.data);
-                navigate('/feed');
+                navigate('/feed', { state: {userEmail: userEmail, userName: response.data.name} });
             } else {
                 alert("Unsupported file type. Please upload a PDF.");
                 setSelectedFileName(null);

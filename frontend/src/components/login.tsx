@@ -17,7 +17,7 @@ const Login = () => {
             });
             console.log(response.data);
             localStorage.setItem('userEmail', email);
-            navigate('/feed', { state: {userEmail: email, userName: response.data.name} })
+            navigate('/flightinfo')
         } catch (error: any) {
             if(error.response && error.response.status === 400) {
                 alert("This user doesn't exist. Redirecting you to sign up");
