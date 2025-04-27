@@ -1,0 +1,140 @@
+/* opening.module.css */
+
+.parentContainer {
+    display: flex;
+    width: 100vw; /* Makes sure the parent container extends the entire window */
+    height: 100vh; /* Use vh for viewport height to cover the whole screen */
+    justify-content: center; /* Centers horizontally on the screen */
+    align-items: center; /* Centers vertically on the screen */
+    overflow: hidden; 
+  }
+
+  .outerContainer {
+    padding: 4px;
+    width: 100%; /* Make sure it takes the full available width */
+    text-align: center; /* Center inline or inline-block content */
+    display: flex;
+    flex-direction: column; /* Stack inner elements vertically */
+    align-items: center; /* Center items horizontally along the cross-axis */
+    /* Other styles */
+  }
+  
+  /* You can keep or add other styles for your component here */
+  /* For example, if you want to style the inner div: */
+  /*
+  .innerContent {
+    // Add styles for the div that wraps your existing content
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  */
+  .normalFont{
+    font-size: 0.875rem; /* text-sm */
+    color: white;        /* text-white */
+    opacity: 0.8;        /* opacity-80 */
+    margin-top: 3.9rem;
+        /* text-gray-200 */
+     
+    /* cn(
+      'text-sm sm:text-base',
+      'text-white',
+      'opacity-80',
+      'text-gray-200'
+    ) */
+  }
+
+  .fuelFont {
+    font-size: 7rem;
+    font-weight: 400;
+    color: white; /* Set the text color to white */
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+    width: auto;
+    height: auto;
+  }
+  /* cn(
+              'text-6xl sm:text-8xl font-semibold',
+              'text-white',
+              'tracking-tighter',
+              'drop-shadow-lg',
+               'bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text', // Added gradient
+            )
+  */
+
+
+  .loginButton {
+    background-color: #FFF3CC;
+    color: #004678;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: 1px solid #FFF3CC;
+  }
+  
+  .loginButton:hover {
+    background-color: #f3f4f6;
+    transform: scale(1.05);
+  }
+
+/*
+  cn(
+                'bg-white text-blue-500',
+                'hover:bg-gray-100 hover:scale-105',
+                'px-6 py-3 rounded-full',
+                'font-semibold shadow-md',
+                'transition-colors duration-300',
+                'border border-blue-500/30'
+              )
+*/
+
+.signupButton {
+  background-color: #FFF3CC; 
+  color: #004678;             /* text-white */
+  padding-left: 4.5rem;     /* px-6 */
+  padding-right: 4.5rem;
+  padding-top: 0.6rem;      /* py-3 */
+  padding-bottom: 0.6rem;
+  border-radius: 9999px;    /* rounded-full */
+  font-weight: 600;        /* font-semibold */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* transition-colors duration-300 */
+  border: 1px solid #FFF3CC; 
+}
+
+.signupButton:hover {
+  background-color: #f59e0b; /* hover:bg-yellow-600 */
+  transform: scale(1.05);       /* hover:scale-105 */
+}
+
+/*
+cn(
+                'bg-yellow-500 text-white',
+                'hover:bg-yellow-600 hover:scale-105',
+                'px-6 py-3 rounded-full',
+                'font-semibold shadow-md',
+                'transition-colors duration-300',
+                'border border-yellow-500/30'
+              )
+*/ 
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem; /* Horizontal space between buttons */
+  margin-top: -5rem; /* Add vertical space above the buttons */
+}
+
+.subtitle { /* Add this class for the "Million tons..." text */
+  color: white;
+  font-size: 1.0rem;
+  opacity: 0.7;
+  margin-top: -2rem; 
+  margin-bottom: 9rem; /* Add vertical space below the text */
+}
+
