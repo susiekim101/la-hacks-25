@@ -8,6 +8,8 @@ import cloud3 from "../assets/images/cloud3.png";
 import cloud4 from "../assets/images/cloud4.png";
 import cloud5 from "../assets/images/cloud5.png";
 import blob from "../assets/images/blob.png"; 
+import circle from "../assets/images/circle.png";
+import oval from "../assets/images/oval.png";
 
 const Opening = () => {
   return (
@@ -29,14 +31,16 @@ const Opening = () => {
       <img src={cloud5} alt="cloud5" className="absolute top-80 left-10 w-1/4 z-0 opacity-60 animate-pulse object-contain" />
       
       {/* BOTTOM BLOBS */}
-      <img src={blob} alt="left blob" className="absolute bottom-[-1000px] left-5 w-1/2 h-auto z-0 transform rotate-10" />
-      <img src={blob} alt="left blob 2" className="absolute bottom-[-120px] left-1/3 w-1/3 h-auto z-0 transform rotate-15" />
-      <img src={blob} alt="center blob" className="absolute bottom-[-130px] left-2/3 w-1/2 h-auto z-0 transform rotate-5" />
-      <img src={blob} alt="right blob" className="absolute bottom-[-120px] right-1/4 w-1/3 h-auto z-0 transform rotate-10" />
+      <img src={oval} alt="left blob" className="absolute bottom-[-550px] left-[800px] w-1/2 h-auto z-0 transform rotate-50" />
+      <img src={blob} alt="left blob" className="absolute bottom-[-250px] left-[500px] w-1/3 h-auto z-0 transform rotate-0" />
+      <img src={oval} alt="left blob 2" className="absolute bottom-[-250px] left-30 w-[35%] h-auto z-0 transform rotate-190" />
+      <img src={circle} alt="center blob" className="absolute bottom-[-200px] left-[-100px] w-1/4 h-auto z-0 transform rotate-300" />
+      <img src={circle} alt="center blob" className="absolute bottom-[-150px] right-[-100px] w-1/4 h-auto z-0 transform rotate-300" />  
+     
 
         {/* CAR */}
         <img src={car} alt="car" 
-        className="absolute bottom-4 left-[65%] w-20 h-auto z-10 transform rotate-[-20deg]" 
+        className="absolute bottom-18 left-[69%] w-20 h-auto z-10 transform rotate-[0deg]" 
       /> 
        <div className={styles.outerContainer}>
         <img src={logo} alt="Logo" className="w-48 h-auto mb-4 mx-auto scale-280" />
