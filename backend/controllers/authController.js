@@ -72,7 +72,7 @@ const verifyUserCode = async(req, res) => {
     const { email, code } = req.body;
     
     try {
-        const user = await findOne({ email });
+        const user = await User.findOne({ email });
         if(!user) return res.status(400).json({error: "User not found"});
 
         if(user.verificationCode === code) {
@@ -82,6 +82,8 @@ const verifyUserCode = async(req, res) => {
             // Save information into db
             await user.save();
             return res.status(200).json({message: "Email verified successfully!"});
+        } else{
+            return res.status(400).json({error:"Invalid verification code"});
         }
     } catch (err) {
         console.error(err);
