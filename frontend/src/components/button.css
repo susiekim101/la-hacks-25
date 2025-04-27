@@ -1,0 +1,25 @@
+.button {
+  width: 90px;
+  height: 45px;
+  border-radius: 10%;
+  background-color: #7fc8fc;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  align-self: center;
+  margin: 8px;
+}
+
+.button-text {
+  display: inline-block; /* Allows us to apply mask properties */
+  font-size: 20px; /* Adjust as needed */
+  font-weight: bold; /* Or your desired font weight */
+  color: #000; /* This color doesn't really show, as the mask covers it */
+  background-image: linear-gradient(
+    to right,
+    #000850,
+    #004678
+  ); /* Your gradient colors */
+  -webkit-background-clip: text; /* Clip the background to the text shape (for WebKit browsers) */
+  background-clip: text; /* Standard property for clipping background to text */
+  -webkit-text-fill-color: transparent; /* Make the text itself transparent */
+  /* text-fill-color: transparent; Standard property for transparent text */
+}
