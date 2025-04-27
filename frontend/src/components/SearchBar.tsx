@@ -1,5 +1,5 @@
 import FilterButton from "./FilterButton.tsx";
-import "./SearchBar.css";
+import "../css/SearchBar.css";
 
 function SearchBar() {
   return (

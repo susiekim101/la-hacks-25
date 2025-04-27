@@ -1,10 +1,16 @@
 import ProfilePreview from "./ProfilePreview.tsx";
+import AcceptInviteButton from "./AcceptInviteButton.tsx";
 
 function InviteCard(){
     return(
-        <>
-            <ProfilePreview/>
-        </>
+        <div className = "invite-card">
+            <div className = "profile-preview">
+                <ProfilePreview/>
+            </div>
+            <div className = "accept-invite">
+                <AcceptInviteButton/>
+            </div>
+        </div>
     );
 }
 

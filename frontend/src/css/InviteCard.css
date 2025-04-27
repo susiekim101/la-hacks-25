@@ -1,0 +1,15 @@
+.invite-card{
+    display: flex;
+    margin: 8px;
+    background-color: rgba(69, 178, 255, 0.3);
+}
+
+.profile-preview{
+    flex: 1;
+    margin: 8px;
+}
+
+.accept-invite{
+    flex: 1;
+    margin: 8px;
+}

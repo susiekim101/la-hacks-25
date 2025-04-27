@@ -1,0 +1,14 @@
+.profile-preview {
+  display: "flex";
+  padding: 16px;
+}
+
+.pfp-preview {
+  flex: 1;
+  width: 50%;
+}
+
+.name-preview {
+  flex: 1;
+  width: 50%;
+}
