@@ -10,13 +10,23 @@ import cloud5 from "../assets/images/cloud5.png";
 import blob from "../assets/images/blob.png"; 
 import circle from "../assets/images/circle.png";
 import oval from "../assets/images/oval.png";
+import star from "../assets/images/star.png";
 
 const Opening = () => {
   return (
     <div className={styles.parentContainer}>
       <NavBar/> 
+
+      {/* Stars */}
+      <img src={star} alt="star" className="absolute top-10 left-10 w-1/8 z-o opacity-100 animate-pulse object-contain rotate-180" />
+      <img src={star} alt="star" className="absolute top-10 right-10 w-1/8 z-o opacity-100 animate-pulse object-contain" />
+      <img src={star} alt="star" className="absolute bottom-100 left-40 w-1/8 z-o opacity-100 animate-pulse object-contain rotate-90" />
+      <img src={star} alt="star" className="absolute top-5 right-80 w-1/6 z-o opacity-100 animate-pulse object-contain rotate-330" />
+      <img src={star} alt="star" className="absolute top-0 left-100 w-1/13 z-o opacity-100 animate-pulse object-contain rotate-50" />
+      <img src={star} alt="star" className="absolute bottom-100 right-30 w-1/13 z-o opacity-100 animate-pulse object-contain rotate-40" />
+
       {/* Cloud 1 */}
-        <img src={cloud1} alt="cloud1" className="absolute top-10 left-10 w-1/4 z-0 opacity-60 animate-pulse object-contain" />
+      <img src={cloud1} alt="cloud1" className="absolute top-10 left-10 w-1/4 z-0 opacity-60 animate-pulse object-contain" />
       
       {/* Cloud 2 */}
       <img src={cloud2} alt="cloud2" className="absolute top-16 left-3/4 w-1/5 z-0 opacity-60 animate-pulse object-contain" />
