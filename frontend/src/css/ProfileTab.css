@@ -1,0 +1,27 @@
+.profile {
+  width: 1000px;
+  height: 700px;
+  text-align: center;
+  background-color: rgba(225, 240, 242, 0.3);
+  overflow-y: scroll;
+}
+
+.profile-top {
+  display: flex;
+  width: 1000px;
+  /* background-color: rgba(9, 119, 134, 0.3); */
+}
+.personal-information{
+  text-align: left;
+}
+
+.name-profile {
+  width: 500px;
+  text-align: left;
+}
+
+.emissions-rank {
+  margin-left: auto;
+  text-align: right;
+  /* background-color: rgba(18, 169, 31, 0.3); */
+}

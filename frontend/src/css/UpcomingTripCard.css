@@ -1,17 +1,19 @@
-.upcoming-trip-card{
-    display: flex;
-    margin: 8px;
-    background-color: rgba(69, 178, 255, 0.3);
+.upcoming-trip-card {
+  display: flex;
+  margin: 8px;
+  background-color: rgba(69, 178, 255, 0.3);
+  height: 100px;
+  width: 400px;
+  border-radius: 5%;
 }
 
-.profile-preview{
-    flex: 1;
-    margin: 8px;
-
+.profile-preview {
+  flex: 1;
+  margin: 8px;
 }
-.contact-info{
-    flex: 1;
-    background-color: #BBDCF3;
-    border-radius: 15%;
-    margin: 8px;
+.contact-info {
+  flex: 1;
+  background-color: #bbdcf3;
+  border-radius: 15%;
+  margin: 8px;
 }

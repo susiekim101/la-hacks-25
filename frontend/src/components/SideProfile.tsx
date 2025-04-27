@@ -1,14 +1,15 @@
 import NextFlightCard from "./NextFlightCard.tsx";
 import Descriptors from "./Descriptors.tsx";
+import "../css/SideProfile.css";
 
 function SideProfile() {
   return (
     <>
       {/* put profile picture here*/}
-      <h1>'name'</h1>
-      <h2>About Me</h2>
+      <h1>Tiffany</h1>
+      <p>1000 tons of carbon saved // what 10 trees absorb in 1 year</p>
       <Descriptors />
-      <h2>Bio</h2>
+      <div className="header-two">Bio</div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -19,7 +20,7 @@ function SideProfile() {
         mollit anim id est laborum.
       </p>
 
-      <h2>Next Flight</h2>
+      <div className="header-two">Next Flight</div>
       <NextFlightCard />
     </>
   );

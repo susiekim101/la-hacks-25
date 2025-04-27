@@ -7,7 +7,8 @@ function UpcomingTripCard(){
             <div className = "profile-preview">
                 <ProfilePreview/>
             </div>
-                <div className = "contact-info">
+            <div className = "contact-info">
+                <p>contact info</p>
             </div>
         </div>
     );

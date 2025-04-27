@@ -4,10 +4,10 @@ function ProfilePreview(){
     return(
         <div className = "profile-preview">
             <div className = "pfp-preview">
-                <h1>"[PFP]"</h1>
+                <p>"[PFP]"</p>
             </div>
             <div className = "name-preview">
-                <h1>name</h1>
+                <p>name</p>
                 <p>Rank: silver</p>
                 <p>10 carbon saved</p>
             </div>
