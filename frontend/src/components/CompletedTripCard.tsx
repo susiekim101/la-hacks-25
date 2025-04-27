@@ -25,8 +25,7 @@ function UpcomingTripCard(): JSX.Element {
                         alignItems="center"
                     >
                         <ProfilePreview />
-                        {/* This text div will now have padding and background */}
-                        <div className={style.fixed2}>kevinn@ucla.edu</div>
+                        
                     </HStack>
                 </div>
 
@@ -39,8 +38,7 @@ function UpcomingTripCard(): JSX.Element {
                         alignItems="center"
                     >
                         <ProfilePreview />
-                        {/* This text div will also have padding and background */}
-                        <div className={style.fixed2}>kevinn@ucla.edu</div>
+                
                     </HStack>
                 </div>
             </HStack>
