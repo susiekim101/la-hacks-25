@@ -1,19 +1,67 @@
-.search-bar {
-  background-color: #eeebeb;
-  height: 40px;
-  width: 1000px;
-  margin: 32px;
-  /* border-radius: 10%; */
-  color: #000850;
-}
-.search-bar-text {
-  /* display: flex; */
-  text-align: left;
-  align-items: center;
+/* SearchBar.css */
+
+/* Container for the search bar */
+.search-bar-container {
+  display: flex; /* Aligns input and button horizontally */
+  align-items: center; /* Vertically centers items */
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounded corners */
+  background-color: #fff;
+  max-width: 1000px; /* Optional: constrain width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Smooth transition on focus */
 }
 
-.filter-button {
-  display: flex;
-  justify-content: flex-end;
-  /* align-items: center; */
+/* Styling for when the container has focus within (input is focused) */
+.search-bar-container:focus-within {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3); /* Stronger shadow on focus */
+}
+
+/* Search input field */
+.search-input {
+  flex-grow: 1; /* Allows input to take up available space */
+  border: none; /* Remove default border */
+  outline: none; /* Remove default focus outline */
+  padding: 8px 10px; /* Inner spacing */
+  font-size: 1rem; /* Text size */
+  background-color: transparent; /* Inherit background from container */
+  margin-right: 5px; /* Space between input and button */
+}
+
+/* Placeholder text style */
+.search-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Search button */
+.search-button {
+  background-color: transparent; /* Make button background transparent */
+  border: none; /* Remove default border */
+  outline: none; /* Remove default focus outline */
+  padding: 6px 8px; /* Button padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* To center the icon */
+  align-items: center;
+  justify-content: center;
+  color: #555; /* Icon color */
+  transition: color 0.2s ease-in-out;
+}
+
+/* Search button icon style (targets the SVG) */
+.search-button svg {
+  width: 18px; /* Icon size */
+  height: 18px;
+}
+
+/* Search button hover effect */
+.search-button:hover {
+  color: #007bff; /* Change icon color on hover */
+}
+
+/* Optional: Style for when the button is actively being pressed */
+.search-button:active {
+    color: #0056b3; /* Darker color on active press */
 }

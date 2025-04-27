@@ -12,7 +12,9 @@ function Feed() {
         <SideProfile />
       </div>
       <div className="main-content">
-        <SearchBar />
+        <SearchBar onSearch={function (query: string): void {
+          throw new Error("Function not implemented.");
+        } } />
         <PotentialMatchesList />
       </div>
     </div>
