@@ -1,3 +1,5 @@
+import InviteCard from "./InviteCard.tsx";
+
 function InvitesList(){
     return(
         <InviteCard/>
