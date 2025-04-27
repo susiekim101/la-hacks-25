@@ -7,9 +7,13 @@
   color: #000850;
 }
 .search-bar-text{
-
+  /* display: flex; */
+  text-align: left;
+  align-items: center;
 }
 
 .filter-button{
-    
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
