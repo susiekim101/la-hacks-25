@@ -1,8 +1,8 @@
 .button {
-  width: 90px;
+  width: 150px;
   height: 45px;
   border-radius: 10%;
-  background-color: #7fc8fc;
+  background-color:rgba(69, 178, 255);
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   align-self: center;
   margin: 8px;
@@ -11,7 +11,7 @@
 .button-text {
   display: inline-block; /* Allows us to apply mask properties */
   font-size: 20px; /* Adjust as needed */
-  font-weight: bold; /* Or your desired font weight */
+  font-weight: medium; /* Or your desired font weight */
   color: #000; /* This color doesn't really show, as the mask covers it */
   background-image: linear-gradient(
     to right,

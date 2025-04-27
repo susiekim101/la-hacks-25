@@ -1,11 +1,19 @@
-@import "tailwindcss";
+/* In ../css/navbar.module.css OR your global CSS file where .Clouds2Campus is defined */
 
 .Clouds2Campus {
-    position: absolute;
-    top: 1rem; /* Adjust top distance */
-    left: 1rem; /* Adjust left distance */
-    color: white; /* Set text color to white */
-    font-size: 1.2rem; /* Adjust font size as needed */
-    /* You might need to adjust font-family if it has a specific font */
-  }
-  
+  position: absolute;
+  top: 1rem;               /* Adjust top distance */
+  left: 1rem;              /* Adjust left distance */
+  color: white;            /* Set text color to white */
+  font-size: 1.2rem;       /* Adjust font size as needed */
+  text-decoration: none;   /* <<< Add this to remove link underline */
+  z-index: 1000;           /* <<< Add/Ensure high z-index for absolute positioning */
+  /* You might need to adjust font-family if it has a specific font */
+}
+
+/* Optional: Style for hover state if desired */
+.Clouds2Campus:hover {
+  /* Example: Slightly change opacity or add subtle effect */
+  opacity: 0.9;
+  /* color: #f0f0f0; */ /* Example: Slightly lighter color on hover */
+}

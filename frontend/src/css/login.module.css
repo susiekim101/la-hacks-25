@@ -70,3 +70,92 @@ button:focus-visible {
     margin-top: 50px;
 }
 
+.vstack {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* or whatever spacing you want */
+  align-items: start; /* or center if you want it centered */
+}
+
+.fixed {
+  color: RGB(0, 8, 80);
+  font-weight: 500;
+  font-size: x-large;
+  margin-right: 20px;
+}
+
+.fixed2 {
+  color: RGB(0, 8, 80);
+  font-weight: 500;
+  font-size: large;
+
+}
+
+.fixed3_5 {
+  color: white;
+  font-weight: 700;
+  font-size: medium;
+
+}
+
+.fixed3 {
+  color: white;
+  font-weight: 300;
+  font-size: medium;
+
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.profilePreviewContainer {
+  width: 60 rem;           /* Take full available width */
+  margin-left: 0;        /* Remove left margin */
+  margin-right: 0;       /* Remove right margin */
+  padding-left: 1rem;    /* Add some INTERNAL padding on the left */
+  padding-right: 1rem;   /* Add some INTERNAL padding on the right */
+  padding-top: 0.75rem;  /* Optional: Vertical padding */
+  padding-bottom: 0.75rem;/* Optional: Vertical padding */
+  box-sizing: border-box;/* Include padding in the width calculation */
+  /* Ensure flex/grid properties if needed, but width: 100% is key */
+}
+
+.inviteCardContainer {
+  display: block; /* Or 'flex' if needed, but HStack should handle internal layout */
+  background-color:rgba(69, 178, 255, 0.5); /* Standard white card background */
+  border-radius: 8px;       /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  margin-top: 1rem;
+  margin-bottom: 1rem;      /* Space below the card if you have multiple */
+  width: 100%;              /* Make card take full width of its parent */
+  max-width: 600px;         /* Optional: constrain max width */
+  box-sizing: border-box; 
+  padding-right: 1rem;  /* Include padding and border in the element's total width and height */
+}
+.ongoingCardContainer {
+  display: block; /* Or 'flex' if needed, but HStack should handle internal layout */
+  background-color:rgba(69, 178, 255, 0.5); /* Standard white card background */
+  border-radius: 8px;       /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  margin-top: 1rem;
+  margin-bottom: 1rem;      /* Space below the card if you have multiple */
+  width: 470px;              /* Make card take full width of its parent */      /* Optional: constrain max width */
+  box-sizing: border-box; 
+  padding-right: 1rem;  /* Include padding and border in the element's total width and height */
+}
+
+.kevin {
+  /* Add or modify these properties */
+  background-color:rgba(69, 178, 255); /* Example: Light grey background */
+  padding: 0.5rem 1rem;     /* Example: Add padding (top/bottom and left/right) */
+  border-radius: 4px;       /* Optional: Slightly rounded corners for the background */
+  color:RGB(0, 8, 80);              /* Optional: Ensure text color contrasts well */
+  font-size: 0.9rem;  
+  font-weight: 800px;      /* Example: Set font size if needed */
+  margin-left: 1rem;   
+  padding-right: 1rem;      /* Optional: Add space between ProfilePreview and this text */
+                             /* Adjust or remove if HStack spacing handles it */
+  display: inline-block;    /* Helps padding apply correctly if it wasn't already block/flex */
+}

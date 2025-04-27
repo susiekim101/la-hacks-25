@@ -1,6 +1,6 @@
 import NextFlightCard from "./NextFlightCard.tsx";
 import Descriptors from "./Descriptors.tsx";
-import profileImage from "./jnpfp.jpeg";
+import profileImage from "../assets/images/jnpfp.jpeg";
 import "../css/SideProfile.css";
 
 function SideProfile() {

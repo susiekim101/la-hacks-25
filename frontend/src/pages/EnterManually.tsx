@@ -9,6 +9,7 @@ import cloud3 from '../assets/images/cloud1.png';
 import cloud4 from "../assets/images/cloud4.png";
 import cloud5 from "../assets/images/cloud5.png";
 import star from "../assets/images/star.png";
+import NavBar from "../components/navbar";
 
 import React, { useState, ChangeEvent } from 'react'; // Import ChangeEvent
 
@@ -44,6 +45,7 @@ const EnterManually: React.FC = () => {
 
     return (
         <div className={styles.parent}>
+             <NavBar/> 
             {/* Background Clouds */}
             {/* Cloud 1 */}
       <img src={cloud1} alt="cloud1" className="absolute top-10 left-0 w-1/4 z-0 opacity-60 animate-pulse object-contain" />
@@ -172,7 +174,7 @@ const EnterManually: React.FC = () => {
 
                     <Spacer size="1.5rem" />
                     <NextButton
-                        targetPath="/Confirmation" // Ensure this path exists in your router
+                        targetPath="/feed" // Ensure this path exists in your router
                     />
 
                 </div> {/* End FlightInfoContainer */}

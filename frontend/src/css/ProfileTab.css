@@ -2,21 +2,25 @@
   width: 1000px;
   height: 700px;
   text-align: center;
-  background-color: rgba(225, 240, 242, 0.3);
+  background-color: rgba(225, 240, 242, 0.5);
   overflow-y: scroll;
 }
 
 .profile-top {
   display: flex;
   width: 1000px;
+  padding-top: 50px;
+  padding-left: 50px;
   /* background-color: rgba(9, 119, 134, 0.3); */
 }
 .personal-information{
   text-align: left;
+  padding-left: 50px;
 }
 
 .name-profile {
   width: 500px;
+  padding-top: 50px;
   text-align: left;
 }
 
@@ -24,4 +28,9 @@
   margin-left: auto;
   text-align: right;
   /* background-color: rgba(18, 169, 31, 0.3); */
+}
+
+.leftpadding{
+  padding-left: 15px;
+  padding-right: 15px;
 }
