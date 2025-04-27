@@ -2,8 +2,10 @@ import { useState } from "react";
 import styles from "../css/verification.module.css"
 import { useLocation } from 'react-router-dom';
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Verification = () => {
+    const navigate = useNavigate();
     const [ code, setCode ] = useState('');
     const location = useLocation();
     const initialEmail = location.state?.email || '';
@@ -17,7 +19,7 @@ const Verification = () => {
                 code,
             });
             alert(response.data.message);
-            // navigate('/nextpage');
+            navigate('/flightinfo');
         } catch (err: any) {
             if(err.response && err.response.status === 400) {
                 alert(err.response.data.error);

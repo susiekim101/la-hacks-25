@@ -8,7 +8,11 @@ const userSchema = new mongoose.Schema( {
     age: {type: Number, required: true},
 
     verificationCode: { type: String },
-    isVerified: { type: Boolean, default: false }
+    isVerified: { type: Boolean, default: false },
+
+    bio: { type: String, default: ""}
+
+    
 });
 
 const User = mongoose.model('User', userSchema);
