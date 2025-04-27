@@ -6,6 +6,8 @@ function SideProfile() {
     <>
       {/* put profile picture here*/}
       <h1>'name'</h1>
+      <h2>About Me</h2>
+      <Descriptors />
       <h2>Bio</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -19,8 +21,6 @@ function SideProfile() {
 
       <h2>Next Flight</h2>
       <NextFlightCard />
-      <h2>About Me</h2>
-      <Descriptors />
     </>
   );
 }

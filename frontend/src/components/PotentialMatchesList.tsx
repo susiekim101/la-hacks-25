@@ -1,10 +1,15 @@
-import PotentialMatchCard from  './PotentialMatchCard.tsx'
-
-
+import PotentialMatchCard from "./PotentialMatchCard.tsx";
+import "./PotentialMatchesList.css";
 
 function PotentialMatchesList() {
-    return(
-        <PotentialMatchCard/>
-    )
+  return (
+    <div className="potential-matches-list">
+      <PotentialMatchCard />
+      <PotentialMatchCard />
+      <PotentialMatchCard />
+      <PotentialMatchCard />
+      <PotentialMatchCard />
+    </div>
+  );
 }
-export default PotentialMatchesList
+export default PotentialMatchesList;

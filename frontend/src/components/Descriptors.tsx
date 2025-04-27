@@ -1,6 +1,6 @@
 function Descriptors() {
     return(
-        "hello world"
+        "insert descriptors here"
     )
 }
 export default Descriptors

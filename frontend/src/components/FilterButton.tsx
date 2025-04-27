@@ -1,6 +1,10 @@
+import "./button.css";
+
 function FilterButton(){
     return (
-        "filter button"
+        <button className = "button">
+            <span className = "button-text">filter</span>
+        </button>
     )
 }
 export default FilterButton

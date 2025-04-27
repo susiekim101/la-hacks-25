@@ -1,0 +1,15 @@
+.next-flight-card {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10%;
+  padding: 24px;
+  margin: 8px;
+  color: #000850;
+}
+
+.flight-info {
+  display: flex;
+  width: 100%;
+  /* padding: 16px;
+    /* height: 100%; */
+  /* background-color: white; */
+}

@@ -1,11 +1,13 @@
-import FilterButton from  './FilterButton.tsx'
+import FilterButton from "./FilterButton.tsx";
+import "./SearchBar.css";
 
 function SearchBar() {
-    return(
-        <>
-            {/* put search bar  icon*/}
-            <FilterButton/>
-        </>
-    )
+  return (
+    <div className="search-bar">
+      {/* put search bar  icon*/}
+      <p>search</p>
+      <FilterButton />
+    </div>
+  );
 }
-export default SearchBar
+export default SearchBar;
