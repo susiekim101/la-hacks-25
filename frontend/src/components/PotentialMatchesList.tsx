@@ -1,5 +1,5 @@
 import PotentialMatchCard from "./PotentialMatchCard.tsx";
-import "./PotentialMatchesList.css";
+import "../css/PotentialMatchesList.css";
 
 function PotentialMatchesList() {
   return (

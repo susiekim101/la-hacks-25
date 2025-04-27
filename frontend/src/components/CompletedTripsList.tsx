@@ -1,12 +1,12 @@
 import CompletedTripCard from "./CompletedTripCard";
+import "../css/CompletedTripsList.css";
 
 function CompletedTripsList() {
-    return(
-        <>
-            <CompletedTripCard/>
-        
-        </>
-    );
+  return (
+    <div className="completed-trips-list">
+      <CompletedTripCard />
+    </div>
+  );
 }
 
-export default CompletedTripsList
+export default CompletedTripsList;

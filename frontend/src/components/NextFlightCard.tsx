@@ -1,4 +1,4 @@
-import "./NextFlightCard.css";
+import "../css/NextFlightCard.css";
 function NextFlightCard() {
   return (
     <div className="next-flight-card">
