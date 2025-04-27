@@ -2,14 +2,15 @@ import MatchButton from "./MatchButton.tsx";
 import Descriptors from "./Descriptors.tsx";
 import Tags from "./Tags.tsx";
 import "../css/PotentialMatchCard.css";
-import ExamplePfP from "../assets/images/circle.png";
+import Photo from "../components/ProfilePhoto.tsx"
+import style from "../css/login.module.css"
 
 function PotentialMatchCard() {
   return (
     <div className="card">
       <div className="section">
-        <div className="profile-image">
-          <img src={ExamplePfP} alt="Profile Photo" />
+      <div className={style.center}>
+          <Photo/>
         </div>
         <div className="match-name">match name</div>
         <p>100 carbon saved</p>
@@ -19,8 +20,7 @@ function PotentialMatchCard() {
       </div>
       <div className="section">
         <p>
-          Biography: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Biography: I like trains and cool cars.
         </p>
       </div>
       <div className="section">
