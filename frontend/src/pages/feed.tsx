@@ -4,10 +4,12 @@ import SideProfile from "../components/SideProfile.tsx";
 import SearchBar from "../components/SearchBar.tsx";
 import PotentialMatchesList from "../components/PotentialMatchesList.tsx";
 import HStack from '../components/HStack';
+import NavBar from "../components/navbar";
 
 function Feed() {
   return (
     <div className="feed-container">
+      <NavBar/> 
       <div className="side-content">
         <SideProfile />
       </div>
