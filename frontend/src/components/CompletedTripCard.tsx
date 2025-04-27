@@ -24,19 +24,9 @@ function UpcomingTripCard(): JSX.Element {
                         spacing="1rem" // Example: Adding space via HStack
                         alignItems="center"
                     >
+                         <div className={style.fixed3}>January, 25, 2025</div>
                         <ProfilePreview />
-                        
-                    </HStack>
-                </div>
-
-                {/* --- Second Card --- */}
-                <div className={style.inviteCardContainer}>
-                     {/* This HStack arranges items within the second card */}
-                    <HStack
-                        // spacing="0rem"
-                        spacing="1rem" // Example: Adding space via HStack
-                        alignItems="center"
-                    >
+                        <ProfilePreview />
                         <ProfilePreview />
                 
                     </HStack>

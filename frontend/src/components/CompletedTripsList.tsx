@@ -6,6 +6,7 @@ function CompletedTripsList() {
     <div className="completed-trips-list">
       <CompletedTripCard />
       <CompletedTripCard />
+      <CompletedTripCard />
     </div>
   );
 }
