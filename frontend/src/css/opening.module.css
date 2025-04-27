@@ -1,13 +1,16 @@
 /* opening.module.css */
 
 .parentContainer {
-    display: flex;
-    width: 100vw; /* Makes sure the parent container extends the entire window */
-    height: 100vh; /* Use vh for viewport height to cover the whole screen */
-    justify-content: center; /* Centers horizontally on the screen */
-    align-items: center; /* Centers vertically on the screen */
-    overflow: hidden; 
-  }
+  /* position: fixed; Makes it fixed to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
   .outerContainer {
     padding: 4px;
@@ -16,6 +19,7 @@
     display: flex;
     flex-direction: column; /* Stack inner elements vertically */
     align-items: center; /* Center items horizontally along the cross-axis */
+    
     /* Other styles */
   }
   
@@ -96,4 +100,5 @@
   margin-top: -2rem; 
   margin-bottom: 9rem; /* Add vertical space below the text */
 }
+
 

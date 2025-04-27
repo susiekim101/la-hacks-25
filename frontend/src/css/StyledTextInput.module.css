@@ -1,0 +1,76 @@
+/* src/components/StyledTextInput.module.css */
+
+.styledInput {
+    /* Background and Border */
+    background-color: rgba(255, 255, 255, 0.4); /* White at 40% opacity */
+    border: 1px solid white;
+    border-radius: 20px; /* Rounded corners */
+  
+    /* Text and Font */
+    color: #333; /* Text color - needs contrast against light background */
+                /* Adjust if your page background is very light */
+    font-size: 1rem;
+    font-family: inherit; /* Use the parent container's font */
+  
+    /* Sizing and Spacing */
+    padding:0.2rem 1.2rem; /* Adjust padding as needed */
+    width: 50%; /* Make it take available width by default */
+               /* Or set a specific width like 'width: 250px;' */
+    box-sizing: border-box; /* Include padding/border in width calculation */
+  
+    /* Behavior */
+    outline: none; /* Remove default browser focus outline */
+    cursor: text; /* Show the I-beam cursor on hover */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions */
+  }
+  
+  /* Style for the placeholder text */
+  .styledInput::placeholder {
+    color: rgba(51, 51, 51, 0.6); /* Darker semi-transparent placeholder */
+    opacity: 1; /* Ensure placeholder is visible */
+  }
+  
+  /* Custom focus style (important for accessibility if outline is removed) */
+  .styledInput:focus {
+    border-color: #ccc; /* Example: slightly darken border on focus */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); /* Example: subtle white glow */
+  }
+  
+  /* Optional: Style when disabled */
+  .styledInput:disabled {
+    background-color: rgba(200, 200, 200, 0.3);
+    border-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* src/components/StyledTextInput.module.css */
+
+.styledInput {
+  /* Background and Border */
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  border-radius: 20px;
+
+  /* Text and Font */
+  color: #333;
+  font-size: 1rem;
+  font-family: inherit;
+
+  /* Sizing and Spacing */
+  padding: 0.6rem 1.2rem;
+  box-sizing: border-box;
+
+  /* --- MODIFIED --- */
+  /* width: 100%; */ /* REMOVE or comment out width: 100% */
+  flex-grow: 1;      /* ADD this: Allows input to take remaining space in the flex row */
+  min-width: 0;      /* Important for flex-grow in some scenarios */
+  /* --- END MODIFIED --- */
+
+
+  /* Behavior */
+  outline: none;
+  cursor: text;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* ... (keep placeholder, focus, disabled styles) ... */

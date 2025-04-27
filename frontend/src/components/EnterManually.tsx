@@ -1,6 +1,5 @@
 // src/components/UploadManually.tsx (Example file path)
 
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const UploadManually = () => {
@@ -12,7 +11,7 @@ const UploadManually = () => {
     // Handler function to navigate when the button is clicked
     const handleManualEntryClick = () => {
         console.log("Navigating to /enter_manually...");
-        navigate('/enter_manually'); // Navigate to the specified route
+        navigate('/EnterManually'); // Navigate to the specified route
     };
 
     return (

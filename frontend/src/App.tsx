@@ -6,6 +6,7 @@ import FlightInfo from './pages/flight_info.tsx';
 import Verification from './pages/verification.tsx';
 import Feed from './pages/feed.tsx';
 import Profile from './pages/profile.tsx';
+import EnterManually from './pages/EnterManually.tsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/verification" element={<Verification/>}/>
         <Route path="/feed" element={<Feed/>} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/EnterManually" element={<EnterManually/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -16,6 +16,7 @@ const Login = () => {
                 password
             });
             console.log(response.data);
+            localStorage.setItem('userEmail', email);
             navigate('/feed', { state: {userEmail: email, userName: response.data.name} })
         } catch (error: any) {
             if(error.response && error.response.status === 400) {

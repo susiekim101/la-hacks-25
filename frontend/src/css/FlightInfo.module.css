@@ -10,39 +10,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden; /* Prevents scrollbars from clouds */
-}
-
-.parent {
-    position: relative; /* ESSENTIAL for positioning absolute children (clouds) */
-    display: flex;
-    justify-content: center; /* Center direct child horizontally */
-    align-items: center; /* Center direct child vertically */
-    width: 100vw;
-    min-height: 100vh; /* Corrected: Use min-height and vh */
-    overflow: hidden; /* Keep hiding overflow */
-}
-
-.FlightInfoContainer {
-    display: flex; /* Make this a flex container */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Distribute space / center vertically */
-    width: clamp(300px, 35vw, 500px); /* Responsive width: min, preferred, max */
-    min-height: 70vh; /* Use min-height for flexibility */
-    background: rgba(255, 255, 255, 0.4); /* Slightly more opaque white */
-    backdrop-filter: blur(5px); /* Optional: Add blur effect */
-    border-radius: 20px;
-    padding: 30px 40px; /* Adjust padding */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
-
-/* Main wrapper for content inside parent */
-.contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center title and container */
-    z-index: 10; /* Ensure content is above clouds */
+    overflow: hidden;
 }
 
 .parent {
@@ -55,58 +23,80 @@ body {
     overflow: hidden;
 }
 
-/* Wrapper for the centered content */
-.contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center children by default */
-    z-index: 10;
-    width: clamp(300px, 35vw, 500px); /* Give the wrapper the width constraint */
-}
-
 .FlightInfoContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    width: 100%; /* Take full width of contentWrapper */
-    min-height: 70vh;
+    width: clamp(300px, 35vw, 500px); 
+    min-height: 70vh; 
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
     border-radius: 20px;
     padding: 30px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.parent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    width: clamp(300px, 35vw, 500px); 
+}
+
+.FlightInfoContainer {
+    width: 100%; 
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    background: rgba(118, 198, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .normalFont {
-    color: #003366;
-    font-weight: 400;
-    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 25px;
 }
 
-/* --- Updated styles for the "New Trip" title --- */
+.text {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 10px;
+}
+
 .myfont {
-    /* Font styling */
-    font-weight: 700; /* Bold weight */
-    font-size: 64 px; /* Specific font size */
-    margin-bottom: 0 px;
-
-    /* Gradient text effect */
-    background-image: linear-gradient(to bottom, #000850, #004678); /* The gradient */
-    background-clip: text;
-    -webkit-background-clip: text; /* For Safari/Chrome compatibility */
-    color: transparent; /* Make the actual text color transparent */
-
-    /* Alignment and spacing */
-    align-self: flex-start; /* Align this specific element to the left within .contentWrapper */
-    margin-bottom: 1.5rem; /* Space below title */
-    padding-left: 5px; /* Optional: Add a little padding if it looks too close to the edge */
-    width: 100%; /* Ensure it takes full width for align-self */
-    text-align: left; /* Explicitly align text left */
+    color: white;
+    font-weight: 700;
+    margin: 20px;
+    font-size: 1.5rem;
 }
 
-/* Removed unused/redundant styles like .uploadContainer, .stack-container, old .vstack if not needed elsewhere */
-/* Keep button styles if used by imported components */
 .navigationButton {
     padding: 0.5rem 1.5rem;
     background-color: #45b2ff;
@@ -114,9 +104,32 @@ body {
     border-radius: 5px;
     cursor: pointer;
     color: white;
-    transition: background-color 0.2s ease; /* Add transition */
+    transition: background-color 0.2s ease; 
 }
 
 .navigationButton:hover {
     background-color: #004678;
+}
+
+.inputRow {
+    display: flex;  
+    align-items: center;  
+    gap: 1rem;    
+    width: 100%;   
+    margin-bottom: 0.75rem; 
+  }
+  
+.inputLabel {
+    color: #003366; 
+    font-weight: 500; 
+    flex-shrink: 0;
+
+  }
+
+.enter {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 5px;
 }
