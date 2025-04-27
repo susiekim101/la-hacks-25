@@ -2,6 +2,7 @@ import styles from "../css/opening.module.css";
 import logo from "../assets/images/logo.png";
 import car from "../assets/images/car.png";
 import NavBar from "./navbar";
+import NavigateButton from '../components/NavigateButton';
 import cloud1 from "../assets/images/cloud1.png";
 import cloud2 from "../assets/images/cloud2.png";
 import cloud3 from "../assets/images/cloud3.png";
@@ -58,8 +59,18 @@ const Opening = () => {
           <div className={styles.fuelFont}>467</div>
           <p className={styles.subtitle}>million tons of carbon saved</p>
           <div className={styles.buttonsContainer}>
-            <button className={styles.loginButton}>Login</button>
-            <button className={styles.signupButton}>Sign up</button>
+          <NavigateButton
+        targetPath="/login" // Specify the destination route
+        buttonText="Login"
+        className={styles.loginButton}
+      />
+
+          <NavigateButton
+                  targetPath="/signup" // Specify the destination route
+                  buttonText="Sign Up"
+                  className={styles.loginButton}
+                /> 
+
             </div>
           </div>
         </div>
