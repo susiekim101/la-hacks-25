@@ -1,0 +1,75 @@
+/* Main container layout */
+.profile-photo {
+    display: flex; /* Arrange PFP and details side-by-side */
+    align-items: center; /* Vertically align items */
+    gap: 15px; /* Space between PFP and details */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 350px; /* Optional: Constrain width */
+    font-family: sans-serif;
+  }
+  
+  /* Container for the profile picture */
+  .pfp-container {
+    width: 120px;         /* Desired width */
+    height: 120px;        /* Desired height (same as width for circle) */
+    border-radius: 50%;  /* Makes it a circle */
+    overflow: hidden;    /* Hides parts of the image outside the circle */
+    cursor: pointer;     /* Indicates it's clickable */
+    border: 2px solid RGB(0, 70, 120)    ; /* Optional subtle border */
+    flex-shrink: 0;      /* Prevent shrinking if container is flex */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  .pfp-container2 {
+    width: 80px;         /* Desired width */
+    height: 80px;        /* Desired height (same as width for circle) */
+    border-radius: 50%;  /* Makes it a circle */
+    overflow: hidden;    /* Hides parts of the image outside the circle */
+    cursor: pointer;     /* Indicates it's clickable */
+    border: 2px solid RGB(0, 70, 120)    ; /* Optional subtle border */
+    flex-shrink: 0;      /* Prevent shrinking if container is flex */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  .pfp-container:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  /* The actual image inside the circular container */
+  .pfp-image {
+    width: 100%;         /* Fill the container width */
+    height: 100%;        /* Fill the container height */
+    object-fit: cover;   /* Scale image to cover container, cropping if needed */
+    display: block;      /* Remove extra space below image */
+  }
+  
+  /* Container for user details */
+  .name-preview {
+    display: flex;
+    flex-direction: column; /* Stack details vertically */
+    gap: 4px; /* Space between text lines */
+  }
+  
+  /* Styling for text elements (optional) */
+  .name-preview p {
+    margin: 0; /* Remove default paragraph margins */
+    color: #333;
+  }
+  
+  .name-preview .user-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #111;
+  }
+  
+  .name-preview .user-rank {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .name-preview .user-stats {
+    font-size: 0.9em;
+    color: #006400; /* Dark green for positive stat */
+  }

@@ -6,6 +6,7 @@ import cloud2 from '../assets/images/cloud2.png';
 import cloud3 from '../assets/images/cloud3.png';
 import cloud4 from '../assets/images/cloud4.png';
 import star from "../assets/images/star.png";
+import NavBar from "../components/navbar";
 
 const Spacer = ({ width = '1rem' }: { width?: string }) => {
     return (
@@ -16,6 +17,7 @@ const Spacer = ({ width = '1rem' }: { width?: string }) => {
 function Login() {
     return (
         <div className={styles.parent}>
+             <NavBar/> 
             <img src={cloud1} className="absolute top-10 -left-20 w-md h-md z-0" alt='cloud 1'/>
             <img src={cloud2} className="absolute top-10 -right-5 w-md h-md z-0" alt='cloud 2'/>
             <img src={cloud3} className="absolute top-15 -left-15 w-md h-md z-0" alt='cloud 3'/>

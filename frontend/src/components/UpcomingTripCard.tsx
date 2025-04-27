@@ -1,16 +1,24 @@
 import ProfilePreview from "./ProfilePreview.tsx";
 import "../css/UpcomingTripCard.css";
+import style from "../css/login.module.css";   
+import HStack from '../components/HStack';
 
 function UpcomingTripCard(){
     return(
-        <div className = "upcoming-trip-card">
-            <div className = "profile-preview">
-                <ProfilePreview/>
-            </div>
-            <div className = "contact-info">
-                <p>contact info</p>
-            </div>
-        </div>
+        
+        <div className={style.ongoingCardContainer}>
+        <HStack
+            spacing="0rem"
+            alignItems="center"
+        >
+            <ProfilePreview />
+
+            <div className={style.kevin}>kevinn@ucla.edu</div>
+            
+        </HStack>
+        
+        
+</div>
     );
 }
 
