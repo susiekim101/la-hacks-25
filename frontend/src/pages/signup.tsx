@@ -4,6 +4,7 @@ import UserSignUp from '../components/signup.tsx';
 import cloud1 from '../assets/images/cloud1.png';
 import cloud2 from '../assets/images/cloud2.png';
 import star from "../assets/images/star.png";
+import NavBar from "../components/navbar";
 
 const Spacer = ({ width = '1rem' }: { width?: string }) => {
     return (
@@ -15,6 +16,7 @@ function SignUp() {
     return (
         <>
             <div className={styles.parent}>
+            <NavBar/> 
                 <img src={cloud1} className="absolute top-10 -left-20 w-md h-md z-0" alt='decor 1'/>
                 <img src={cloud2} className="absolute top-5 -right-5 w-md h-md z-0" alt='decor2'/>
                 <img src={star} alt="star" className="absolute top-10 left-10 w-1/8 z-o opacity-100 animate-pulse object-contain rotate-180" />

@@ -1,0 +1,28 @@
+/* src/css/StartTripButton.module.css */
+
+.startTripButton {
+    display: inline-block; /* Allow padding and treat like a block but flow inline */
+    padding: 0.8rem 1.8rem; /* Adjust padding for desired size */
+    background-color: #7FC8FC; /* Example: Green background */
+    color: white;            /* White text */
+    font-size: 1.2rem;       /* Adjust font size */
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;   /* Remove default link underline */
+    border: none;            /* Remove border */
+    border-radius: 8px;      /* Rounded corners */
+    cursor: pointer;         /* Indicate it's clickable */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease; /* Smooth transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.startTripButton:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.startTripButton:active {
+    background-color: #1e7e34; /* Even darker when clicking */
+    transform: scale(0.98);  /* Slightly shrink when clicking */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
