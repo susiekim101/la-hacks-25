@@ -2,18 +2,18 @@ import "../css/Descriptors.css";
 
 function Descriptors() {
   return (
-    <div className = "descriptors">
+    <div className="descriptors">
       <p>
-        <span className="bold-text">School:</span> UCLA
+        <span className="bold-text">School:</span> N/A
       </p>
       <p>
-        <span className="bold-text">Year:</span> Sophomore
+        <span className="bold-text">Year:</span> N/A
       </p>
       <p>
-        <span className="bold-text">Gender:</span> Female
+        <span className="bold-text">Gender:</span> N/A
       </p>
       <p>
-        <span className="bold-text">Arrival Time:</span> 5:15pm
+        <span className="bold-text">Arrival Time:</span> N/A
       </p>
     </div>
   );

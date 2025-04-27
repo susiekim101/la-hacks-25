@@ -1,7 +1,5 @@
 function Tags() {
-    return(
-        "tags"
-    );
+  return "example tag";
 }
 
-export default Tags
+export default Tags;

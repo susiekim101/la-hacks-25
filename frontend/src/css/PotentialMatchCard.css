@@ -9,8 +9,29 @@
 }
 
 .section {
-  flex: 1; /* each section shares equal space */
+  flex: 1;
   /* background-color: white;  */
-  padding: 10px;
+  /* padding: px; */
   border-radius: 10px;
+  margin: 10px;
+}
+
+.section1 {
+  text-align: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.match-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #003366;
 }
