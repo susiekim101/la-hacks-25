@@ -1,5 +1,3 @@
-import { useState } from "react";
-import axios from "axios";
 import styles from '../css/login.module.css';
 import UserSignUp from '../components/signup.tsx';
 import cloud1 from '../assets/images/cloud1.png';

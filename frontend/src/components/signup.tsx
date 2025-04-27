@@ -28,14 +28,23 @@ const SignUp = () => {
                 age,
             });
             console.log(response.data);
-            alert("Sign up successful. Redirecting you to login");
-            navigate('/login');
+            alert("Please check your email for a verification code");
+            navigate('/verification', {state: {email}});
         } catch(err: any) {
             if(err.response && err.response.status === 400) {
-                alert("This user already exists. Redirecting you to login");
-                navigate('/login');
+                const errorMessage = err.response.data.error;
+
+                if(errorMessage.includes("already exists")){
+                    alert("This user already exists. Redirecting you to login");
+                    navigate('/login');
+                } else if(errorMessage.includes("valid email address")) {
+                    alert("Please use a valid .edu email address.");
+                } else {
+                    alert("Something went wrong. Please try again");
+                }
             } else {
                 console.log(err);
+                alert("Unexpected server error. Please try again later");
             }
         }
     };
@@ -97,7 +106,7 @@ const SignUp = () => {
                             
                         </div>
 
-                        <label htmlFor="password" className="block text-gray-700 mb-2">Password:</label>
+                        <label htmlFor="password" className="block text-gray-700 my-3">Password:</label>
                         <input 
                             id="password"
                             type="password"
@@ -117,6 +126,7 @@ const SignUp = () => {
                     </button>
                 </div>
                 </form>
+                <a href="/login" className="block mt-5 text-white visited:text-white text-center my-0">Back</a>
             </div>
         </>
     )
