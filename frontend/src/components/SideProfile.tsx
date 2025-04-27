@@ -1,27 +1,30 @@
 import NextFlightCard from "./NextFlightCard.tsx";
 import Descriptors from "./Descriptors.tsx";
+import profileImage from "./jnpfp.jpeg";
 import "../css/SideProfile.css";
 
 function SideProfile() {
   return (
     <>
-      {/* put profile picture here*/}
-      <h1>Tiffany</h1>
-      <p>1000 tons of carbon saved // what 10 trees absorb in 1 year</p>
-      <Descriptors />
-      <div className="header-two">Bio</div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-
-      <div className="header-two">Next Flight</div>
-      <NextFlightCard />
+      <div className="side-profile">
+        <div className="profile-container">
+          <div className="profile-image">
+            <img src={profileImage} alt="Profile Photo" />
+          </div>
+          <div className="profile-text">
+            <h2>Tiff_N</h2>
+            <p>1000 tons of carbon saved // what 10 trees absorb in 1 year</p>
+          </div>
+        </div>
+        <Descriptors />
+        <div className="header-two">Bio</div>
+        <p>
+          Hi! I'm a Biz-econ major, you should connect with me on LinkedIn. In
+          my free time, I enjoy creating my own boba and going to raves.
+        </p>
+        <div className="header-two">Next Flight</div>
+        <NextFlightCard />
+      </div>
     </>
   );
 }
