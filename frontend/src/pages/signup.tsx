@@ -1,27 +1,9 @@
-import { useState } from "react";
-import axios from "axios";
 import styles from '../css/login.module.css';
 import UserSignUp from '../components/signup.tsx';
 import cloud1 from '../assets/images/cloud1.png';
 import cloud2 from '../assets/images/cloud2.png';
 
 function SignUp() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleLogin = async (e: { preventDefault: () => void; }) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post('http://localhost:5173/api/auth/login', {
-                username,
-                password
-            });
-            console.log(response.data);
-        } catch (error) {
-            console.error('Login error:', error);
-        }
-    }
-
     return (
         <>
             <div className={styles.parent}>

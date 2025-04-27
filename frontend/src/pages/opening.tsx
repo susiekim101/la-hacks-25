@@ -1,8 +1,13 @@
+import StartPage from '../components/opening';
+
 function Opening() {
-    return (
-        <>
-        </>
-    )
+  return (
+    <>
+      <StartPage/>
+    </>
+    
+  );
 }
 
-export default Opening
+export default Opening;
+

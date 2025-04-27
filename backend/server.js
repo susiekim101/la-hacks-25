@@ -23,5 +23,3 @@ app.use('/api/auth', authRoutes);
 
 // Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-const User = require('./models/user');
