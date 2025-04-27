@@ -130,7 +130,7 @@ button:focus-visible {
   margin-top: 1rem;
   margin-bottom: 1rem;      /* Space below the card if you have multiple */
   width: 100%;              /* Make card take full width of its parent */
-  max-width: 600px;         /* Optional: constrain max width */
+  max-width: 80vw;         /* Optional: constrain max width */
   box-sizing: border-box; 
   padding-right: 1rem;  /* Include padding and border in the element's total width and height */
 }
