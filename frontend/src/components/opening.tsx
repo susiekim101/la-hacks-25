@@ -29,11 +29,10 @@ const Opening = () => {
       <img src={cloud5} alt="cloud5" className="absolute top-80 left-10 w-1/4 z-0 opacity-60 animate-pulse object-contain" />
       
       {/* BOTTOM BLOBS */}
-      <img src={blob} alt="left blob" className="absolute bottom-1/9 w-1/2 h-auto z-0 transform rotate-12" />
-      <img src={blob} alt="left blob 2" className="absolute bottom-4 left-1/4 w-1/5 h-auto z-0 transform rotate-5" />
-      <img src={blob} alt="center blob" className="absolute bottom-2 left-2/3 w-1/3 h-auto z-0 transform rotate-0" />
-      <img src={blob} alt="right blob 2" className="absolute bottom-4 right-1/4 w-1/5 h-auto z-0 transform rotate-5" />
-      <img src={blob} alt="right blob" className="absolute bottom-0 right-0 w-1/4 h-auto z-0 transform rotate-15" />
+      <img src={blob} alt="left blob" className="absolute bottom-[-1000px] left-5 w-1/2 h-auto z-0 transform rotate-10" />
+      <img src={blob} alt="left blob 2" className="absolute bottom-[-120px] left-1/3 w-1/3 h-auto z-0 transform rotate-15" />
+      <img src={blob} alt="center blob" className="absolute bottom-[-130px] left-2/3 w-1/2 h-auto z-0 transform rotate-5" />
+      <img src={blob} alt="right blob" className="absolute bottom-[-120px] right-1/4 w-1/3 h-auto z-0 transform rotate-10" />
 
         {/* CAR */}
         <img src={car} alt="car" 

@@ -1,5 +1,10 @@
 /* opening.module.css */
 
+.firstPage {
+  overflow: hidden;
+  height: 100vh; /* Ensure it takes the full viewport height */
+}
+
 .parentContainer {
     display: flex;
     width: 100vw; /* Makes sure the parent container extends the entire window */
@@ -96,4 +101,5 @@
   margin-top: -2rem; 
   margin-bottom: 9rem; /* Add vertical space below the text */
 }
+
 
