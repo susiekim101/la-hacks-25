@@ -16,6 +16,7 @@ const Login = () => {
                 password
             });
             console.log(response.data);
+            navigate('/feed', { state: {userEmail: email, userName: response.data.name} })
         } catch (error: any) {
             if(error.response && error.response.status === 400) {
                 alert("This user doesn't exist. Redirecting you to sign up");
