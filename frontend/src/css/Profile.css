@@ -1,19 +1,33 @@
-.profile {
-  height: 500px;
-  overflow-y: scroll;
-  padding: 40px;
-  background-color: rgba(225, 240, 242, 0.3);
-  margin: 100px;
+/* Commented-out styles - kept for reference, note the syntax error */
+/* .profile-tab {
+    text-align: center;
+    /* width: 1000px; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* margin: 100 left;  <-- SYNTAX ERROR HERE (should be e.g., margin-left: 100px;) */
+    /* background-color: rgba(225, 240, 242, 0.3); */
+/* } */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    /* Simplified background property */
+    background: linear-gradient(to bottom, #45B2FF, #FFF3CC);
+    background-attachment: fixed;
+    background-size: cover;
+    /* Removed redundant background-repeat */
 }
 
-.profile-top {
-  display: flex;
-}
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 
-.name-profile {
-  text-align: left;
-}
-
-.emissions-rank {
-  text-align: right;
+    /* Corrected height to use viewport height (vh) */
+    height: 100vh;
+    /* Keep overflow: hidden if you want absolutely no scrolling and cut off content
+       Remove it if you want the page to scroll if content overflows
+       Use overflow: auto; if you want scrolling *within* this container */
+    /* overflow-y: scroll; Adjust as needed */
 }
