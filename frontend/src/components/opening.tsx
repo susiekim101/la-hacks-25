@@ -1,7 +1,7 @@
 import styles from "../css/opening.module.css"; 
 import logo from "../assets/images/logo.png";
 import car from "../assets/images/car.png";
-import Tag from "./navbar";
+import NavBar from "./navbar";
 import cloud1 from "../assets/images/cloud1.png";
 import cloud2 from "../assets/images/cloud2.png";
 import cloud3 from "../assets/images/cloud3.png";
@@ -12,7 +12,7 @@ import blob from "../assets/images/blob.png";
 const Opening = () => {
   return (
     <div className={styles.parentContainer}>
-      <Tag/> 
+      <NavBar/> 
       {/* Cloud 1 */}
         <img src={cloud1} alt="cloud1" className="absolute top-10 left-10 w-1/4 z-0 opacity-60 animate-pulse object-contain" />
       
