@@ -11,8 +11,8 @@ const UploadManually = () => {
 
     // Handler function to navigate when the button is clicked
     const handleManualEntryClick = () => {
-        console.log("Navigating to /enter-manually...");
-        navigate('/enter-manually'); // Navigate to the specified route
+        console.log("Navigating to /enter_manually...");
+        navigate('/enter_manually'); // Navigate to the specified route
     };
 
     return (
