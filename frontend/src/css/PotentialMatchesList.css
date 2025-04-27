@@ -1,4 +1,5 @@
 .potential-matches-list {
+  color: #0a2e52;
   overflow-y: scroll;
   width: 1000px;
   height: 650px;
