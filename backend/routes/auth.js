@@ -17,7 +17,4 @@ router.post('/verification', verifyUserCode);
 // Route to Gemini API
 router.post('/pdf', upload, extractArrivalTime);
 
-const { extractArrivalTime } = require('../controllers/uploadController');
-router.post('/get-arrival-time', getArrivalTime);
-
 module.exports = router;
