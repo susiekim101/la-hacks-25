@@ -19,16 +19,6 @@
     /* Other styles */
   }
   
-  /* You can keep or add other styles for your component here */
-  /* For example, if you want to style the inner div: */
-  /*
-  .innerContent {
-    // Add styles for the div that wraps your existing content
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  */
   .normalFont{
     font-size: 0.875rem; /* text-sm */
     color: white;        /* text-white */
@@ -52,15 +42,6 @@
     width: auto;
     height: auto;
   }
-  /* cn(
-              'text-6xl sm:text-8xl font-semibold',
-              'text-white',
-              'tracking-tighter',
-              'drop-shadow-lg',
-               'bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text', // Added gradient
-            )
-  */
-
 
   .loginButton {
     background-color: #FFF3CC;
@@ -81,17 +62,6 @@
     transform: scale(1.05);
   }
 
-/*
-  cn(
-                'bg-white text-blue-500',
-                'hover:bg-gray-100 hover:scale-105',
-                'px-6 py-3 rounded-full',
-                'font-semibold shadow-md',
-                'transition-colors duration-300',
-                'border border-blue-500/30'
-              )
-*/
-
 .signupButton {
   background-color: #FFF3CC; 
   color: #004678;             /* text-white */
@@ -110,17 +80,6 @@
   background-color: #f59e0b; /* hover:bg-yellow-600 */
   transform: scale(1.05);       /* hover:scale-105 */
 }
-
-/*
-cn(
-                'bg-yellow-500 text-white',
-                'hover:bg-yellow-600 hover:scale-105',
-                'px-6 py-3 rounded-full',
-                'font-semibold shadow-md',
-                'transition-colors duration-300',
-                'border border-yellow-500/30'
-              )
-*/ 
 
 .buttonsContainer {
   display: flex;
