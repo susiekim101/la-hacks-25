@@ -1,8 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "../css/login.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -14,8 +16,13 @@ const Login = () => {
                 password
             });
             console.log(response.data);
-        } catch (error) {
-            console.error('Login error:', error);
+        } catch (error: any) {
+            if(error.response && error.response.status === 400) {
+                alert("This user doesn't exist. Redirecting you to sign up");
+                navigate('/signup');
+            } else {
+                console.log(error);
+            }
         }
     }
 
